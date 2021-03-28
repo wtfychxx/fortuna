@@ -26,7 +26,9 @@
 	<link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/admin/css/jquery.mCustomScrollbar.css">
 	<!-- Style.css -->
 	<link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/admin/css/style.css">
-	<link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/bootstrap/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/vendor/daterangepicker/daterangepicker.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?= BASE_PATH ?>/public/css/fortuna.css">
 	<script type="text/javascript" src="<?=  BASE_PATH ?>/public/jquery/jquery-3.3.1.min.js"></script>
 	<style media="screen">
 		.label-required{
@@ -84,8 +86,6 @@
 	<!-- jquery slimscroll js -->
 	<script type="text/javascript" src="<?= BASE_PATH ?>/public/admin/js/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-	<script type="text/javascript" src="<?= BASE_PATH ?>/public/js/fortuna.js"></script>
-
 	<!-- slimscroll js -->
 	<script src="<?= BASE_PATH ?>/public/admin/js/jquery.mCustomScrollbar.concat.min.js "></script>
 
@@ -93,8 +93,9 @@
 	<script src="<?= BASE_PATH ?>/public/admin/js/pcoded.min.js"></script>
 	<script src="<?= BASE_PATH ?>/public/admin/js/vertical/vertical-layout.min.js"></script>
 	<script src="<?= BASE_PATH ?>/public/vendor/daterangepicker/moment.min.js"></script>
-	<script src="<?= BASE_PATH ?>/public/vendor/daterangepicker/daterangepicker.js"></script>
-
+	<!-- <script src="<?= BASE_PATH ?>/public/vendor/daterangepicker/daterangepicker.js"></script> -->
+	<script src="<?= BASE_PATH ?>/public/bootstrap/bootstrap-datepicker/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="<?= BASE_PATH ?>/public/js/fortuna.js"></script>
 	<script type="text/javascript" src="<?= BASE_PATH ?>/public/admin/js/script.js"></script>
 </body>
 </html>

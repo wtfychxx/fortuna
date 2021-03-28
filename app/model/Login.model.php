@@ -22,6 +22,7 @@ class LoginModel extends Model{
 				'user_id' => $user_id,
 				'name_official' => $resultData[0]['name_official'],
 				'birth_date' => $resultData[0]['birth_date'],
+				'user_store_id' => $resultData[0]['store__id'],
 				'akses' => $result[0]['akses__id']
 			);
 

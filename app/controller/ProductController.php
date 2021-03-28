@@ -28,7 +28,7 @@ class ProductController extends MainController{
 			$row[] = $li['price'];
 			$row[] = $li['description'];
 			$row[] = $li['stock'];
-			$row[] = "<a class='btn btn-success' onclick='editForm(\"".$li['id']."\")'> Edit <a> <a class='btn btn-danger' onclick='deleteForm(\"".$li['id']."\")'> Delete <a>";
+			$row[] = "<a class='btn btn-success btn-rounded' onclick='editForm(\"".$li['id']."\")'><i class='fa fa-pencil'></i> <a> <a class='btn btn-danger' onclick='deleteForm(\"".$li['id']."\")'><i class='fa fa-trash'></i><a>";
 
 
 			$data[] = $row;

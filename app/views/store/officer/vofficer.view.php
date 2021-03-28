@@ -57,12 +57,13 @@
         <button class="close" aria-hidden="true"><span data-dismiss="modal">&times;</span></button>
       </div>
 
-      <form class="form-material">
+      <form class="form-material" id="frm_modal">
         <div class="modal-body">
           <div class="row">
             <div class="col-md-4">
               <div class="form-group form-primary">
                 <input type="text" id="name_first" name="name_first" class="form-control">
+                <input type="hidden" id="id" name="id" class="form-control">
                 <span class="form-bar"></span>
                 <label class="float-label"> Name First </label>
               </div>
@@ -96,9 +97,17 @@
           </div>
 
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
               <div class="form-group form-primary">
-                <input type="text" name="birth_date" id="birth_date" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" required>
+                <span class="form-bar"></span>
+                <label class="float-label"> Email </label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" name="birth_date" id="birth_date" class="form-control datepicker" readonly>
                 <span class="form-bar"></span>
                 <label class="float-label"> Birth Date </label>
               </div>
@@ -130,7 +139,15 @@
 
     $('#btn_add').tooltip({
       title: 'add new officer'
-    })
+    });
+
+    $('#btn_add').on('click', function(){
+      $('#frm_modal')[0].reset();
+      $('#frm_modal input[type=hidden]').val('');
+
+      $('.datepicker').datepicker('update', moment().format('YYYY-MM-DD'));
+      $('#birth_date').change();
+    });
 
     document.getElementById('btn_add').addEventListener('click', function(){
       $('#modal_add').modal('show');
@@ -141,6 +158,10 @@
       'trigger': 'focus'
     });
 
-    $('#birth_date').daterangepicker();
+    $('#btn_modal_save').on('click', function(){
+      let method = ($('#id').val() === '' ? 'POST' : 'PUT');
+
+      validateForm('<?= BASE_PATH ?>' + '/officer/insert', '#frm_modal', method, $('#frm_modal').serialize(), 'JSON', false, table.ajax.reload);
+    });
   });
 </script>
